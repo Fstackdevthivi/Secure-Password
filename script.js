@@ -8,9 +8,6 @@ document.querySelectorAll(".text-input").forEach((element) => {
     });
 });
 
-
-
-
 const passwordField = document.querySelector("#password_user");
 const passwordrField = document.querySelector("#password_retype");
 const eyeIcon= document.querySelector("#eye");
@@ -21,8 +18,6 @@ eyeIcon.addEventListener("click", function () {
     passwordField.setAttribute("type", type);
     passwordrField.setAttribute("type", type);
 });
-
-
 
 function strength(password) {
     let i = 0;
