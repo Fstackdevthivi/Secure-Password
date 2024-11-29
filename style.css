@@ -1,8 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-
-
-
-
 body{
     font-family: 'Poppins', sans-serif;
     
@@ -17,15 +13,13 @@ body{
     width: 309.6px;
     margin:20px 0;
 }
-  
-  
+
 .input-container,.p-input-container{
     width: 309.6px;
     position: relative;
     margin:20px 0;
     display: flex;
 }
-  
   
 .label,.pass-label {
     position: absolute;
@@ -36,8 +30,6 @@ body{
     z-index: 1;
     color: rgb(49, 39, 131);
 }
-
-
 
 .text-input,.pass-input {
     padding: 0.8rem;
@@ -51,91 +43,91 @@ body{
     color: rgb(49, 39, 131);
 }
 
-  .label::before, .pass-label::before {
-      content: "";
-      height: 5px;
-      position: absolute;
-      left: 0px;
-      top: 10px;
-      width: 100%;
-      z-index: -1;
-  }
+.label::before, .pass-label::before {
+  content: "";
+  height: 5px;
+  position: absolute;
+  left: 0px;
+  top: 10px;
+  width: 100%;
+  z-index: -1;
+}
   
-  .text-input:focus,.pass-input:focus {
-      border: 2px solid rgb(49, 39, 131);
-  }
+.text-input:focus,.pass-input:focus {
+  border: 2px solid rgb(49, 39, 131);
+}
+
+.text-input:focus + .label,
+.filled {
+  top: -10px;
+  color: rgb(49, 39, 131);
+  font-size: 14px;
+  background: #fff;
+}
+.pass-input:focus + .pass-label,
+.filled {
+  top: -10px;
+  color: rgb(49, 39, 131);
+  font-size: 14px;
+  background: #fff;
+}
+
+.text-input::placeholder,.pass-input::placeholder {
+  font-size: 16px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.text-input:focus::placeholder {
+  opacity: 1;
+}
+.pass-input:focus::placeholder {
+  opacity: 1;
+}
+.pass-strength {
+  display: flex;
+  align-items: center;
+  margin-top: 3px;
+}
+
+.strength-label {
+  font-size: 12px;
+  margin-left: 10px;
+}
+.strength-percent {
+  flex: 1;
+  height: 5px;
+  border-radius: 10px;
+  display: block;
+  background: #eee;
+}
+
+.strength-percent span {
+  display: block;
+  height: 100%;
+  transition: all 0.4s;
+  border-radius: 10px;
+}
+
+.fa-eye, .fa-eye-slash{
+  position: absolute;
+  top:35%;
+  right: 5%;
+  cursor: pointer;
+  color: rgb(49, 39, 131);
+}
   
-  .text-input:focus + .label,
-  .filled {
-      top: -10px;
-      color: rgb(49, 39, 131);
-      font-size: 14px;
-      background: #fff;
-  }
-  .pass-input:focus + .pass-label,
-  .filled {
-      top: -10px;
-      color: rgb(49, 39, 131);
-      font-size: 14px;
-      background: #fff;
-  }
-  
-  .text-input::placeholder,.pass-input::placeholder {
-      font-size: 16px;
-      opacity: 0;
-      transition: all 0.3s;
-  }
-  .text-input:focus::placeholder {
-      opacity: 1;
-  }
-  .pass-input:focus::placeholder {
-      opacity: 1;
-  }
-  .pass-strength {
-      display: flex;
-      align-items: center;
-      margin-top: 3px;
-  }
-  
-  .strength-label {
-      font-size: 12px;
-      margin-left: 10px;
-  }
-  .strength-percent {
-      flex: 1;
-      height: 5px;
-      border-radius: 10px;
-      display: block;
-      background: #eee;
-  }
-  
-  .strength-percent span {
-      display: block;
-      height: 100%;
-      transition: all 0.4s;
-      border-radius: 10px;
-  }
-  
-  .fa-eye, .fa-eye-slash{
-      position: absolute;
-      top:35%;
-      right: 5%;
-      cursor: pointer;
-      color: rgb(49, 39, 131);
-  }
-  
-  .weak {
-      background: red;
-      width: 33%;
-  }
-  
-  .average {
-      background: #ffd000;
-      width: 66%;
-  }
-  
-  .strong {
-      background: green;
-      width: 100%;
-  }
+.weak {
+  background: red;
+  width: 33%;
+}
+
+.average {
+  background: #ffd000;
+  width: 66%;
+}
+
+.strong {
+  background: green;
+  width: 100%;
+}
 
